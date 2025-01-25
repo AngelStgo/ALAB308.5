@@ -1,12 +1,39 @@
 // === Part 1: Thinking Functionally ===
 
-//TODO: Take an array of numbers and return the sum.
-const myArrayNumbers = [5, 8, 2, 12, 45]
-function sumNumbers(a,b) {
-    return (a + b)
-}
+const myWordsArray = [] //for practice purpose and experiment results
+const myArrayNumbers = [5, 8, 2, 12, 45];
 
+myArrayNumbers.forEach((num, index) => { // print array content , index & value
+    console.log(`Index: ${index}, Value: ${num}`);
+  });
+
+// = = = = = = = = = 
+console.log("= = = = = = = = = = = = ");
+// = = = = = = = = = 
+
+  // Take an array of numbers and return the sum.
+
+    let sum = 0 
+    myArrayNumbers.forEach ( item => { sum += item; });
+    console.log(sum);
+
+    //another way to sum:
+    const initialValue = 0; // another way to sum
+const sumWithInitial = myArrayNumbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+    
 //TODO: Take an array of numbers and return the average. ???
+let average = 0;
+myArrayNumbers.forEach ((item) => {
+    average += item
+});
+console.log(average / myArrayNumbers.length);
+console.log(average);
+
 
 
 //TODO: Take an array of strings and return the longest string.
